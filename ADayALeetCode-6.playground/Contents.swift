@@ -75,12 +75,3 @@ print(test.decompressRLElist([1,1,2,3]))
 //        return result
 //    }
 //}
-
-
-//
-//  User.swift
-//  GitHub_UsersList
-//
-//  Created by wyn on 2020/6/29.
-//  Copyright © 2020 Wyn. All rights reserved.
-//

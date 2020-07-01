@@ -27,14 +27,26 @@ var str = "Hello, playground"
  2 <= nums.length <= 500
  1 <= nums[i] <= 10^3
  */
+//
+//func test(_ nums: [Int]) -> Int{
+//
+//    let no1 = nums.max()
+//
+//    return (no1[0] - 1)*(no1[1] - 1)
+//}
+//
+//print(test([3,4,5,2]))
+//print(test([1,5,4,5]))
+//print(test([3,7]))
 
-func test(_ nums: [Int]) -> Int{
-    
-    let no1 = nums.max()
-    
-    return (no1[0] - 1)*(no1[1] - 1)
+var numsArr = Array(1...49)
+var result = [Int]()
+func lottery(_ nums: [Int]) -> [Int] {
+    for _ in 0...5 {
+        let random = numsArr.randomElement()!
+        numsArr.remove(at: random)
+        result.append(random)
+    }
+    return result
 }
-
-print(test([3,4,5,2]))
-print(test([1,5,4,5]))
-print(test([3,7]))
+print(lottery(numsArr))
