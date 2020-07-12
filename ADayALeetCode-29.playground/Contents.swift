@@ -34,19 +34,19 @@ var str = "Hello, playground"
 
 
 func generateTheString(_ n: Int) -> String {
-    
-//    let oddNumber1 = 1
+    guard n > 1 else { return "a" }
+
     var oddNumber = 0
     var nNumber = n - 1
     var result = "a"
-    
-    if (nNumber) % 2 == 0 {
+
+    if nNumber % 2 == 0 {
         oddNumber += 1
         nNumber -= 1
+        result.append(String(repeating: "c", count: oddNumber))
     }
-    
+
     result.append(String(repeating: "b", count: nNumber))
-    result.append(String(repeating: "c", count: oddNumber))
-    
+
     return result
 }
